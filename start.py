@@ -21,8 +21,7 @@ class Start(Widget):
         self.start_Button.clicked.connect(self.startGame)
 
     def startGame(self):
-        if not os.path.isdir('saves'):
-            os.mkdir('saves')
+        if not os.path.isdir('saves'): os.mkdir('saves')
 
         with open(os.path.join('saves',f"{self.filename_Input.text()}.json"),'wt') as f:
             data = {
@@ -41,6 +40,7 @@ class Start(Widget):
 if __name__ in "__main__":
     from PyQt6.QtWidgets import QApplication
     import sys
+
     app = QApplication(sys.argv)
     window = Start()
     app.exec()

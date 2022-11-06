@@ -10,3 +10,10 @@ class mainMenuSignals:
 class startSignals:
     class toBack(QObject): goto = pyqtSignal()
     class toGame(QObject): goto = pyqtSignal()
+
+class loadSignals:
+    class toBack(QObject): goto = pyqtSignal()
+    class toGame(QObject): goto = pyqtSignal()
+
+class aboutSignals:
+    class toBack(QObject): goto = pyqtSignal()
