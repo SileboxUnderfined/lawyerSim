@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainMenu_Form</class>
+ <widget class="QWidget" name="mainMenu_Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Главное меню</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QLabel" name="game_Label">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>Симулятор Юриста</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="start_Button">
+       <property name="text">
+        <string>Начать игру</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="load_Button">
+       <property name="text">
+        <string>Загрузить игру</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="settings_Button">
+       <property name="text">
+        <string>Настройки</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="about_Button">
+       <property name="text">
+        <string>О игре</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exit_Button">
+       <property name="text">
+        <string>Выход</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
