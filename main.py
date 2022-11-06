@@ -4,14 +4,15 @@ from start import Start
 from load import Load
 from about import About
 from widget import MainWindow
-import sys
+import sys, game
 
 class Main(MainWindow):
     def __init__(self):
         super(Main, self).__init__('main')
+        super(Main, self).connectSignals()
 
         self.stackedWidget.setCurrentWidget(self.mm)
-        #self.setWindowTitle(self.mm.windowTitle())
+        self.setWindowTitle(self.mm.windowTitle())
 
     def initPages(self):
         self.mm = MainMenu()
@@ -36,8 +37,16 @@ class Main(MainWindow):
 
         self.about.toBack.goto.connect(lambda: self.stackedWidget.setCurrentWidget(self.mm))
 
+        self.start.toGame.goto.connect(self.startGame)
 
-if __name__ in "__main__":
+    def startGame(self):
+        game.startGame()
+        self.close()
+
+def startMain():
     app = QApplication(sys.argv)
     window = Main()
     app.exec()
+
+if __name__ in "__main__":
+    startMain()

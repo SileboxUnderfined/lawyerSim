@@ -42,4 +42,6 @@ class MainWindow(QMainWindow):
     def connectSignals(self):
         self.stackedWidget.currentChanged.connect(self.widgetChanged)
 
-    def widgetChanged(self): self.setWindowTitle(self.stackedWidget.currentWidget().windowTitle())
+    def widgetChanged(self):
+        print(self.stackedWidget.currentWidget().windowTitle())
+        self.setWindowTitle(self.stackedWidget.currentWidget().windowTitle())

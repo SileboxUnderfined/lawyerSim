@@ -32,6 +32,8 @@ class Start(Widget):
             }
             json.dump(data, f)
 
+        self.toGame.goto.emit()
+
     def activateGameButton(self):
         if self.name_Input.text() != "" and self.surname_Input.text() != "" and self.filename_Input.text() != "":
             self.start_Button.setEnabled(True)

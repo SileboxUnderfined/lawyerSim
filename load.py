@@ -21,6 +21,8 @@ class Load(Widget):
             self.data = json.load(f)
             print(self.data)
 
+        self.toGame.goto.emit()
+
 if __name__ in "__main__":
     from PyQt6.QtWidgets import QApplication
     import sys
